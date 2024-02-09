@@ -4,7 +4,6 @@ import Card from '@/components/Card';
 
 export default async function Games({ params }) {
     const data = await getData(params)
-    console.log(`https://d2norla3tyc4cn.cloudfront.net/i/s3/[${data.identifier}].webp`)
 
     return (
         <div>

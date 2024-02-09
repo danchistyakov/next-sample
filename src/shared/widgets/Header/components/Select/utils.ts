@@ -1,0 +1,1 @@
+export const menuItems = ['Account', 'Wallet', 'Bonuses', 'Bets', 'History']

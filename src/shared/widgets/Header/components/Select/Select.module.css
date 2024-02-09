@@ -1,0 +1,40 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+}
+
+.button {
+    padding: 9px;
+    background-color: #34C4F61A;
+    border-left: 1px solid #54F4DF;
+    border-right: 1px solid #2AB6FD;
+    background-image: linear-gradient(97.64deg, #54F4DF 19.69%, #2AB6FD 96.22%), linear-gradient(97.64deg, #54F4DF 19.69%, #2AB6FD 96.22%);
+    background-size: 100% 1px;
+    background-position: 0 0, 0 100%;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: absolute;
+    width: 240px;
+    top: 50px;
+    border-width: 1px, 1px, 0px, 1px;
+    border-style: solid;
+    border-color: #47C2E92E;
+    border-radius: 4px;
+    z-index: 1;
+}
+
+.item {
+    background: #BAC1CC1A;
+    padding: 14px 24px 14px 24px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #BAC1CC1A;
+    cursor: pointer;
+}
