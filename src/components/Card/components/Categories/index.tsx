@@ -8,8 +8,8 @@ const Categories: FC<CategoryProps> = ({ data }) => {
         <div className={styles.container}>
             <h3>Категории:</h3>
             <div className={styles.categories}>
-                {data.map(item => (
-                    <div className={styles.category}>
+                {data.map((item, key) => (
+                    <div className={styles.category} key={key}>
                         <p>{item}</p>
                     </div>
                 ))}

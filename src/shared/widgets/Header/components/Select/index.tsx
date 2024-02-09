@@ -6,7 +6,7 @@ import useSelect from './useSelect';
 import { menuItems } from './utils';
 
 const Select: FC = () => {
-    const { buttonRef, isOpen, handleButtonClick, handleItemClick, menuRef, selectedItem, setIsOpen } = useSelect();
+    const { buttonRef, isOpen, handleButtonClick, handleItemClick, menuRef, selectedItem } = useSelect();
 
 
     return (
@@ -14,8 +14,8 @@ const Select: FC = () => {
             <button className={styles.button} onClick={handleButtonClick} ref={buttonRef}>{selectedItem}</button>
             {isOpen && (
                 <ul ref={menuRef} className={styles.dropdown}>
-                    {menuItems.map(item => (
-                        <li className={styles.item} onClick={() => handleItemClick(item)}>{item}</li>
+                    {menuItems.map((item, key) => (
+                        <li className={styles.item} key={key} onClick={() => handleItemClick(item)}>{item}</li>
                     ))}
                 </ul>
             )}

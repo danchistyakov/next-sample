@@ -1,8 +1,8 @@
 export interface CardProps {
-    data: Card;
+    data: ICard;
 }
 
-export interface Card {
+export interface ICard {
     identifier: string; // уникальный идентификатор игры
     seo_title: string; // уникальный SEO-ключ игры
     title: string; // Текстовое название игры

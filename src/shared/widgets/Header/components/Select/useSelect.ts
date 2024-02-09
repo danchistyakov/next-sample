@@ -7,8 +7,8 @@ const useSelect = () => {
     const menuRef = useRef<HTMLUListElement | null>(null);
 
     useEffect(() => {
-        const handleClickOutside = (event) => {
-            if (menuRef.current && !menuRef.current.contains(event.target) && !buttonRef.current?.contains(event.target)) {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (menuRef.current && !menuRef.current.contains(event.target as HTMLUListElement) && !buttonRef.current?.contains(event.target as HTMLButtonElement)) {
                 setIsOpen(false);
             }
         };
@@ -21,17 +21,17 @@ const useSelect = () => {
 
     }, []);
 
-    const handleButtonClick = (e) => {
+    const handleButtonClick = (e: React.MouseEvent<HTMLButtonElement>) => {
         e.stopPropagation();
         setIsOpen(prev => !prev);
     };
 
-    const handleItemClick = (item) => {
+    const handleItemClick = (item: string) => {
         setSelectedItem(item);
         setIsOpen(false);
     };
 
-    return { buttonRef, isOpen, handleButtonClick, handleItemClick, menuRef, selectedItem, setIsOpen }
+    return { buttonRef, isOpen, handleButtonClick, handleItemClick, menuRef, selectedItem }
 
 }
 
