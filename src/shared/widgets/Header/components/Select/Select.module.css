@@ -24,9 +24,7 @@
     position: absolute;
     width: 240px;
     top: 50px;
-    border-width: 1px, 1px, 0px, 1px;
-    border-style: solid;
-    border-color: #47C2E92E;
+    border-width: 1px solid #47C2E92E;
     border-radius: 4px;
     z-index: 1;
 }
