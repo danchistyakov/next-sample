@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -9,23 +10,6 @@ export default function Home() {
           &nbsp;
           <code className={styles.code}>Тестовое задание от Даниила Чистякова</code>
         </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
       </div>
 
       <div className={styles.center}>
@@ -41,7 +25,7 @@ export default function Home() {
 
       <div className={styles.grid}>
         <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          href="/"
           className={styles.card}
           target="_blank"
           rel="noopener noreferrer"
@@ -53,7 +37,7 @@ export default function Home() {
         </a>
 
         <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          href="/"
           className={styles.card}
           target="_blank"
           rel="noopener noreferrer"
@@ -61,20 +45,19 @@ export default function Home() {
           <h2>
             2 задание <span>-&gt;</span>
           </h2>
-          <p>Результат будет в хедере вместе со страницей игры</p>
+          <p>Результат в хедере</p>
         </a>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+        <Link
+          href="/games/ezugi/blackjack-1"
           className={styles.card}
-          target="_blank"
           rel="noopener noreferrer"
         >
           <h2>
             3 задание <span>-&gt;</span>
           </h2>
           <p>Страница игры</p>
-        </a>
+        </Link>
       </div>
     </main>
   );

@@ -24,13 +24,16 @@
     position: absolute;
     width: 240px;
     top: 50px;
-    border-width: 1px solid #47C2E92E;
+    border: 1px solid #47C2E92E;
     border-radius: 4px;
+    background: #2B2C36;
     z-index: 1;
 }
 
 .item {
-    background: #BAC1CC1A;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 14px 24px 14px 24px;
     text-transform: uppercase;
     border-bottom: 1px solid #BAC1CC1A;

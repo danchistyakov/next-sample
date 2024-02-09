@@ -4,11 +4,11 @@ const useSelect = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [selectedItem, setSelectedItem] = useState('Account');
     const buttonRef = useRef<HTMLButtonElement | null>(null);
-    const menuRef = useRef<HTMLUListElement | null>(null);
+    const menuRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
-            if (menuRef.current && !menuRef.current.contains(event.target as HTMLUListElement) && !buttonRef.current?.contains(event.target as HTMLButtonElement)) {
+            if (menuRef.current && !menuRef.current.contains(event.target as HTMLDivElement) && !buttonRef.current?.contains(event.target as HTMLButtonElement)) {
                 setIsOpen(false);
             }
         };

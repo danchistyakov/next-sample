@@ -10,7 +10,7 @@ const Categories: FC<CategoryProps> = ({ data }) => {
             <div className={styles.categories}>
                 {data.map((item, key) => (
                     <div className={styles.category} key={key}>
-                        <p>{item}</p>
+                        <p className={styles.title}>{item}</p>
                     </div>
                 ))}
             </div>

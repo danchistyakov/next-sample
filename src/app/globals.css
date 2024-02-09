@@ -77,7 +77,7 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: #2B2C36;
+  background: #1E1E1E;
 }
 
 a {
@@ -92,6 +92,11 @@ button {
 
 li {
   list-style: none;
+}
+
+button,
+p {
+  color: #BAC1CC
 }
 
 @media (prefers-color-scheme: dark) {
