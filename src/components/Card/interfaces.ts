@@ -1,5 +1,8 @@
-// interfaces/CardProps.ts
 export interface CardProps {
+    data: Card;
+}
+
+export interface Card {
     identifier: string; // уникальный идентификатор игры
     seo_title: string; // уникальный SEO-ключ игры
     title: string; // Текстовое название игры
