@@ -3,7 +3,7 @@ import Image from "next/image";
 import { ICard } from '@/components/Card/interfaces';
 import Card from '@/components/Card';
 
-export default async function Games({ params }) {
+export default async function Games({ params }: GameProps) {
     console.log(params)
     const data = await getData(params)
 
@@ -23,6 +23,10 @@ async function getData({ category, seo_title }: DataParams) {
     const data = await response.json();
     const result = data.filter((item: ICard) => item.provider === category || item.categories.includes(category)).filter((item: ICard) => item.seo_title === seo_title)[0];
     return result
+}
+
+interface GameProps {
+    params: DataParams
 }
 
 
