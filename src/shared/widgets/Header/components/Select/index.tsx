@@ -16,7 +16,7 @@ const Select: FC = () => {
             {isOpen && (
                 <div ref={menuRef} className={styles.dropdown}>
                     {menuItems.map((item, key) => (
-                        <div className={styles.item} key={key} onClick={() => handleItemClick(item)}>
+                        <div className={styles.item} key={key} onClick={handleItemClick} id={item}>
                             <p>{item}</p>
                             <Image
                                 priority

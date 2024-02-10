@@ -26,8 +26,8 @@ const useSelect = () => {
         setIsOpen(prev => !prev);
     };
 
-    const handleItemClick = (item: string) => {
-        setSelectedItem(item);
+    const handleItemClick = (e: React.MouseEvent<HTMLDivElement>) => {
+        setSelectedItem(e.currentTarget.id);
         setIsOpen(false);
     };
 
