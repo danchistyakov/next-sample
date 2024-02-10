@@ -2,20 +2,32 @@ import React from 'react';
 import Image from "next/image";
 import { ICard } from '@/components/Card/interfaces';
 import Card from '@/components/Card';
+import Head from 'next/head';
+import { Metadata } from 'next';
+
+interface MetaDataParams {
+    params: { seo_title: string }
+}
+
+export async function generateMetadata({ params }: MetaDataParams): Promise<Metadata> {
+    const seoTitle = params.seo_title
+    return { title: seoTitle }
+}
 
 export default async function Games({ params }: GameProps) {
-    console.log(params)
     const data = await getData(params)
 
     return (
         <div>
+            <Head>
+                <title>{data.title}</title>
+            </Head>
             <Card data={data} />
         </div>
     );
 };
 
 async function getData({ category, seo_title }: DataParams) {
-    console.log(seo_title)
     const response = await fetch('https://nextjs-test-pi-hazel-56.vercel.app/data/games.json')
     if (!response.ok) {
         throw new Error('Failed to fetch data')
