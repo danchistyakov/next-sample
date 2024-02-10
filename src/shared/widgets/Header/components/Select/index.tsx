@@ -23,7 +23,7 @@ const Select: FC = () => {
                                 src="/icons/ArrowRight.svg"
                                 height={12}
                                 width={12}
-                                alt="Follow us on Twitter"
+                                alt=""
                             />
                         </div>
                     ))}
