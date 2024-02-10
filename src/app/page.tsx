@@ -24,38 +24,22 @@ export default function Home() {
       </div>
 
       <div className={styles.grid}>
-        <a
-          href="/"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            1 задание <span>-&gt;</span>
-          </h2>
-          <p>Расположено в папке utils</p>
-        </a>
+        <div className={styles.card}>
+          <h2>1 задание <span>-&gt;</span></h2>
+          <p>Расположено в папке utils - moveZeros.ts</p>
+        </div>
 
-        <a
-          href="/"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            2 задание <span>-&gt;</span>
-          </h2>
+        <div className={styles.card}>
+          <h2>2 задание <span>-&gt;</span></h2>
           <p>Результат в хедере</p>
-        </a>
+        </div>
 
         <Link
           href="/games/ezugi/blackjack-1"
           className={styles.card}
           rel="noopener noreferrer"
         >
-          <h2>
-            3 задание <span>-&gt;</span>
-          </h2>
+          <h2>3 задание <span>-&gt;</span></h2>
           <p>Страница игры</p>
         </Link>
       </div>
