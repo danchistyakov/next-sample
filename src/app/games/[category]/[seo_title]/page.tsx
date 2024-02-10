@@ -1,8 +1,6 @@
 import React from 'react';
-import Image from "next/image";
 import { ICard } from '@/components/Card/interfaces';
 import Card from '@/components/Card';
-import Head from 'next/head';
 import { Metadata } from 'next';
 
 interface MetaDataParams {
@@ -19,9 +17,6 @@ export default async function Games({ params }: GameProps) {
 
     return (
         <div>
-            <Head>
-                <title>{data.title}</title>
-            </Head>
             <Card data={data} />
         </div>
     );
