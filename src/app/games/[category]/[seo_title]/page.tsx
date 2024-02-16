@@ -7,6 +7,15 @@ interface MetaDataParams {
     params: { seo_title: string }
 }
 
+export async function generateStaticParams() {
+    const response = await fetch('https://nextjs-test-pi-hazel-56.vercel.app/data/games.json')
+    const data = await response.json()
+
+    return data.map((item: ICard) => ({
+        seo_title: item.seo_title,
+    }))
+}
+
 export async function generateMetadata({params}: MetaDataParams): Promise<Metadata> {
     const seoTitle = params.seo_title
     return {title: seoTitle}
