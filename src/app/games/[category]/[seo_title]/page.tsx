@@ -1,29 +1,29 @@
 import React from 'react';
-import { ICard } from '@/components/Card/interfaces';
+import {ICard} from '@/components/Card/interfaces';
 import Card from '@/components/Card';
-import { Metadata } from 'next';
+import {Metadata} from 'next';
 
 interface MetaDataParams {
     params: { seo_title: string }
 }
 
-export async function generateMetadata({ params }: MetaDataParams): Promise<Metadata> {
+export async function generateMetadata({params}: MetaDataParams): Promise<Metadata> {
     const seoTitle = params.seo_title
-    return { title: seoTitle }
+    return {title: seoTitle}
 }
 
-export default async function Games({ params }: GameProps) {
+export default async function Games({params}: GameProps) {
     const data = await getData(params)
 
     return (
         <div>
-            <Card data={data} />
+            <Card data={data}/>
         </div>
     );
 };
 
-async function getData({ category, seo_title }: DataParams) {
-    const response = await fetch('https://nextjs-test-pi-hazel-56.vercel.app/data/games.json')
+async function getData({category, seo_title}: DataParams) {
+    const response = await fetch('https://nextjs-test-pi-hazel-56.vercel.app/data/games.json', {next: {revalidate: 3600}})
     if (!response.ok) {
         throw new Error('Failed to fetch data')
     }
